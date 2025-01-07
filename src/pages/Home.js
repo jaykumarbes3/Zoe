@@ -102,7 +102,7 @@ const Home = () => {
       {/* Countdown Timer Section */}
       <section className="countdown-container">
         <h1>Next Event Starts In</h1>
-        <CountdownTimer targetDate="2024-12-14T18:00:00" />
+        <CountdownTimer targetDate="2025-01-11T18:00:00" />
       </section>
     </div>
   );
