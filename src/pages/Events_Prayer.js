@@ -8,8 +8,8 @@ const EventPrayer = () => {
   const events = [
     { date: '2024-12-01', name: 'Community Prayer Meeting', description: 'Join us for a time of prayer and worship.' },
     { date: '2024-12-05', name: 'Bible Study Group', description: 'An evening of studying the Word together.' },
-    { date: '2024-12-14', name: 'Saturday Worship Service', description: 'A powerful time of worship and prayer.' },
-    { date: '2024-12-20', name: 'Christmas Celebration', description: 'Celebrate the birth of Christ with us.' },
+    { date: '2025-01-11', name: 'Saturday Worship Service', description: 'A powerful time of worship and prayer.' },
+    { date: '2024-12-25', name: 'Christmas Celebration', description: 'Celebrate the birth of Christ with us.' },
   ];
 
   const upcomingEvents = events.filter(event => new Date(event.date) > new Date());

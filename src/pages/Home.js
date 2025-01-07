@@ -64,7 +64,7 @@ const Home = () => {
               <h3>Sunday Sermon Highlights</h3>
               <iframe
                 className="video-frame"
-                src="https://www.youtube.com/embed/sampleVideoId"
+                src="https://www.youtube.com/watch?v=C4luLE78-j8"
                 title="Sunday Sermon Highlights"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -88,7 +88,7 @@ const Home = () => {
               <h3>Weekly Bible Study</h3>
               <iframe
                 className="video-frame"
-                src="https://www.youtube.com/embed/anotherSampleVideoId"
+                src="https://www.youtube.com/watch?v=c_VyjZTR5VM"
                 title="Weekly Bible Study"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -102,7 +102,7 @@ const Home = () => {
       {/* Countdown Timer Section */}
       <section className="countdown-container">
         <h1>Next Event Starts In</h1>
-        <CountdownTimer targetDate="2024-12-14T18:00:00" />
+        <CountdownTimer targetDate="2025-01-11T18:00:00" />
       </section>
     </div>
   );
