@@ -67,7 +67,7 @@ const EventPrayer = () => {
                   <CardMedia
                     component="iframe"
                     height="200"
-                    src="https://www.youtube.com/embed/sampleVideoId"
+                    src="https://www.youtube.com/embed/c_VyjZTR5VM"
                     title="Sunday Sermon Highlights"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
@@ -89,7 +89,7 @@ const EventPrayer = () => {
                   <CardMedia
                     component="iframe"
                     height="200"
-                    src="https://www.youtube.com/embed/sampleVideoId"
+                    src="https://www.youtube.com/embed/fOB73qRVGJs?start=1197"
                     title="Weekly Bible Study Highlights"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
