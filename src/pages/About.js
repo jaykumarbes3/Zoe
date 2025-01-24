@@ -5,36 +5,29 @@ import './About.css'; // Import custom CSS if needed
 const About = () => {
   const sections = [
     {
-      title: "Our Church's History",
+      title: "Our Church's History - A Place of Healing, Transformation, and Divine Encounter",
       content: `
-        Founded in 2023, our church has served as a beacon of faith and community.
-        From humble beginnings in a small wooden chapel, our congregation has grown to
-        become one of the most vibrant and welcoming communities in the region.
-        
-        Today, we continue the legacy of our founders by expanding our outreach efforts,
-        both locally and globally, and by maintaining our commitment to being a place of worship,
-        service, and fellowship for all people.`,
+        Zoe Fellowship, founded in 2022 in Toronto, Canada is a vibrant, spirit-filled community passionate about reconnecting 
+        people with God and fostering spiritual growth. The fellowship began with a humble gathering in a living room, 
+        where hearts united in worship and prayer, and has since blossomed into a thriving ministry. 
+        Drawing from their 20 years of ministry experience in walking with God and serving in various countries, 
+        Bro. Daniel and Sis. Sunitha have been instrumental in prophetic, healing, family Building, counseling, 
+        and edifying churches.`,
     },
     {
-      title: 'Our Mission',
+      title: 'Reconnect with God',
       content: `
-        - Revive: To revive the spiritual life of the people who connect so that they go and carry the mission.
-        - Renew: Renewal of mind, spirit, and body, leading to transformed lives.
-        - Refine: As silver is refined, so will they be refined with the word of God.`,
+        We are passionate about restoring hearts back to God. In a world filled with distractions, Zoe Fellowship provides a sacred space for individuals and families to reconnect with their Creator. Through worship, prayer, and biblical teachings, we inspire people to draw closer to God and experience His unconditional love and presence. `,
     },
     {
-      title: 'Our Vision',
+      title: 'Renew, Revive, and Refine Lives',
       content: `
-        To build a strong community of believers who are united in their faith,
-        empowered to make a difference in the world, and dedicated to the teachings of Jesus Christ.`,
+        At Zoe Fellowship, we believe in the power of renewal. We are committed to helping individuals renew their faith, revive their spiritual passion, and refine their lives to align with God’s purpose. Whether you are seeking a fresh start, deeper faith, or spiritual breakthrough, we are here to guide and encourage you every step of the way.`,
     },
     {
-      title: 'Our Values',
+      title: 'Inspiring Transformation – Becoming God’s Dwelling Place ',
       content: `
-        - Faith: We believe in the transformative power of faith in Jesus Christ.
-        - Community: We are committed to fostering a community of love, support, and service.
-        - Service: We believe in serving our neighbors and the world through acts of compassion and justice.
-        - Worship: We are devoted to gathering together in worship, offering praise to God.`,
+        Our vision is not just to transform lives but to inspire individuals to become living temples of God’s presence—His dwelling place. We believe that through prayer, worship, and the Word, lives can be transformed, empowered, and filled with God’s Spirit to reflect His light in the world. `,
     },
   ];
 

@@ -1,14 +1,36 @@
-import React, { useState } from 'react';
-import { Container, Box, Typography, TextField, Button, Paper, Modal } from '@mui/material';
-import JoinUs from '../components/JoinUs';
+import React, { useState, useEffect, useContext } from 'react';
+import { Container, Box, Typography, TextField, Button, Paper, Table, TableHead, TableBody, TableRow, TableCell, Alert } from '@mui/material';
+import { AuthContext } from '../context/AuthContext'; // Import AuthContext
 import './Support.css'; // Import CSS for styling
 
 const Support = () => {
+  const { user } = useContext(AuthContext); // Get user information (e.g., role)
   const [formData, setFormData] = useState({
     email: '',
     password: '',
   });
-  const [showJoinUs, setShowJoinUs] = useState(false); // State to show JoinUs module
+  const [newcomers, setNewcomers] = useState([]); // State to store newcomer registrations
+  const [loading, setLoading] = useState(false); // State for loading
+  const [error, setError] = useState(null); // State for error handling
+
+  // Fetch newcomer registrations if the user is an admin
+  useEffect(() => {
+    if (user?.role === 'admin') {
+      const fetchNewcomers = async () => {
+        setLoading(true);
+        try {
+          const response = await fetch('/api/newcomers'); // Replace with your API endpoint
+          const data = await response.json();
+          setNewcomers(data);
+          setLoading(false);
+        } catch (error) {
+          setError('Failed to load newcomer registrations.');
+          setLoading(false);
+        }
+      };
+      fetchNewcomers();
+    }
+  }, [user]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,14 +41,6 @@ const Support = () => {
     e.preventDefault();
     console.log('Form Data:', formData);
     // Add authentication logic here
-  };
-
-  const handleSignUpClick = () => {
-    setShowJoinUs(true); // Show JoinUs component
-  };
-
-  const handleCloseModal = () => {
-    setShowJoinUs(false); // Hide JoinUs component
   };
 
   return (
@@ -51,10 +65,10 @@ const Support = () => {
         }}
       >
         <Typography variant="h3" sx={{ fontWeight: 600, color: '#333', mb: 2 }}>
-          Become a Part of Our Community
+          Join the Zoe Fellowship Family 
         </Typography>
         <Typography variant="h6" sx={{ color: '#555', lineHeight: 1.6, fontWeight: 400, mb: 3 }}>
-          Join Zoe International Ministries to connect with like-minded people, access exclusive resources, and grow in faith with us.
+         No matter where you are on your spiritual journey, Zoe Fellowship welcomes you with open arms. Come and experience God’s love, guidance, and power in an atmosphere where lives are transformed, faith is renewed, and hearts are refined. 
         </Typography>
       </Box>
 
@@ -103,66 +117,53 @@ const Support = () => {
             Sign In
           </Button>
         </Box>
-        <Typography variant="body2" textAlign="center" sx={{ mt: 2 }}>
-          Don't have an account?{' '}
-          <span
-            onClick={handleSignUpClick}
-            style={{
-              color: '#1976d2',
-              cursor: 'pointer',
-              textDecoration: 'underline',
-            }}
-          >
-            Sign Up
-          </span>
-        </Typography>
       </Paper>
 
-      {/* JoinUs Modal */}
-      <Modal
-        open={showJoinUs}
-        onClose={handleCloseModal}
-        aria-labelledby="join-us-modal"
-        aria-describedby="join-us-modal-description"
-      >
+      {/* Admin-only Newcomer Registrations */}
+      {user?.role === 'admin' && (
         <Box
           sx={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            width: 500,
-            bgcolor: 'background.paper',
-            boxShadow: 24,
-            p: 4,
+            mt: 6,
+            backgroundColor: '#ffffff',
+            padding: '20px',
             borderRadius: '12px',
+            boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
           }}
         >
-          <Typography
-            id="join-us-modal"
-            variant="h5"
-            sx={{ mb: 3, fontWeight: 600, textAlign: 'center' }}
-          >
-            Join Us
+          <Typography variant="h5" sx={{ fontWeight: 600, mb: 3 }}>
+            Newcomer Registrations
           </Typography>
-          <JoinUs />
-          <Button
-            onClick={handleCloseModal}
-            sx={{
-              display: 'block',
-              mt: 2,
-              mx: 'auto',
-              color: 'white',
-              backgroundColor: '#107C17',
-              '&:hover': {
-                backgroundColor: '#0b5a11',
-              },
-            }}
-          >
-            Close
-          </Button>
+
+          {loading ? (
+            <Typography>Loading...</Typography>
+          ) : error ? (
+            <Alert severity="error">{error}</Alert>
+          ) : newcomers.length > 0 ? (
+            <Table>
+              <TableHead>
+                <TableRow>
+                  <TableCell>Name</TableCell>
+                  <TableCell>Email</TableCell>
+                  <TableCell>Phone</TableCell>
+                  <TableCell>Registration Date</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {newcomers.map((newcomer) => (
+                  <TableRow key={newcomer.id}>
+                    <TableCell>{newcomer.name}</TableCell>
+                    <TableCell>{newcomer.email}</TableCell>
+                    <TableCell>{newcomer.phone}</TableCell>
+                    <TableCell>{new Date(newcomer.registrationDate).toLocaleDateString()}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          ) : (
+            <Typography>No newcomers registered yet.</Typography>
+          )}
         </Box>
-      </Modal>
+      )}
     </Container>
   );
 };

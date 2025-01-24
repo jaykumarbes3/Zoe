@@ -235,3 +235,70 @@ footer a:hover {
   margin-bottom: 20px;
   font-weight: 600;
 }
+/* Vision and Mission Section */
+.vision-mission-section {
+  background-color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.vision-mission-section h2 {
+  font-size: 2.5rem;
+  color: #007bff;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.vision-mission-section p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+/* Reconnect, Renew, Revive, Refine Section */
+.reconnect-renew {
+  background-color: #f7f7f7;
+  padding: 60px 20px;
+}
+
+.reconnect-renew h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.reconnect-renew .grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.reconnect-renew .grid-item {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reconnect-renew .grid-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.reconnect-renew .grid-item h3 {
+  font-size: 1.3rem;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.reconnect-renew .grid-item p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}

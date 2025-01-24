@@ -15,7 +15,7 @@ const Navbar = () => {
           to="/"
           style={{ fontSize: '24px', fontWeight: 'bold', color: '#107C17' }}
         >
-          Zoe Fellowship
+          Zoe International
         </Link>
 
         <button
