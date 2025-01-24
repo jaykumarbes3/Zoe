@@ -144,13 +144,27 @@ h2 {
   background: #0056b3;
 }
 
+/* Custom Modal Size */
+.custom-modal .modal-dialog {
+  max-width: 80%; /* Increase the width to 80% of the viewport */
+  width: 100%;
+}
+
+.custom-modal .modal-body {
+  max-height: 70vh; /* Limit height to 70% of the viewport */
+  overflow-y: auto; /* Add scroll if content exceeds height */
+}
+
+.custom-modal .modal-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .ministries-grid {
     grid-template-columns: 1fr; /* Single column for smaller screens */
-  }
-
-  .modal-image {
-    height: auto;
   }
 }

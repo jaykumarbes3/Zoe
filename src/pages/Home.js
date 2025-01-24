@@ -9,7 +9,7 @@ const Home = () => {
       {/* Hero Section with Parallax Effect */}
       <section className="hero parallax">
         <div className="hero-content">
-          <div className="home-heading-module h1"> Welcome to Zoe International Ministries</div>
+          <h1 className="home-heading-module">Welcome to Zoe Fellowship – Reconnect. Renew. Revive. Refine.</h1>
           <p>Building a community of faith, love, and service.</p>
           <Link to="/learnmore" className="btn btn-primary">
             Learn More
@@ -30,7 +30,7 @@ const Home = () => {
             <p>Community Prayer Gathering</p>
           </div>
           <div className="carousel-slide">
-            <img src="./OutreachImage.jpg" alt="Bible Study" />
+            <img src="./OutreachImage.jpg" alt="Outreach Service" />
             <p>Outreach Service Events</p>
           </div>
           <div className="carousel-slide">
@@ -40,17 +40,53 @@ const Home = () => {
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="about">
+      {/* Vision and Mission Section */}
+      <section className="vision-mission-section">
         <div className="container">
-          <h2>About Us</h2>
+          <h2>Our Vision</h2>
           <p>
-            At Zoe International Ministries, our mission is to inspire and transform lives through the message of hope, faith, and love. 
-            We are dedicated to creating a welcoming space for everyone to grow spiritually and connect with others.
+            <strong>"Connecting people with God, we inspire hearts to experience His presence and become His dwelling place."</strong>
           </p>
-          <Link to="/about" className="btn btn-secondary">
-            About Our Church
-          </Link>
+          <h2>Our Mission</h2>
+          <p>
+            <strong>
+              "We glorify God by sharing His love, fostering relationships, and empowering faith through worship, service, and teaching, 
+              creating a vibrant Fellowship of transformed lives."
+            </strong>
+          </p>
+        </div>
+      </section>
+
+      {/* Reconnect, Renew, Revive, Refine Section */}
+      <section className="reconnect-renew">
+        <div className="container">
+          <h2>Reconnect, Renew, Revive, Refine</h2>
+          <div className="grid-container">
+            <div className="grid-item">
+              <h3>Reconnect with God</h3>
+              <p>
+                Rediscover the joy of a personal relationship with God through worship, prayer, and fellowship.
+              </p>
+            </div>
+            <div className="grid-item">
+              <h3>Renew Your Faith In God</h3>
+              <p>
+                Strengthen your faith and grow spiritually with dynamic teaching and life-transforming experiences.
+              </p>
+            </div>
+            <div className="grid-item">
+              <h3>Revive Your Passion to Seek God</h3>
+              <p>
+                Ignite your hunger to know God more deeply and experience His presence in every area of your life.
+              </p>
+            </div>
+            <div className="grid-item">
+              <h3>Refine Your Purpose in Serving God</h3>
+              <p>
+                Discover your God-given purpose and live it out with passion, excellence, and love.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
