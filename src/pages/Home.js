@@ -100,7 +100,7 @@ const Home = () => {
               <h3>Sunday Sermon Highlights</h3>
               <iframe
                 className="video-frame"
-                src="https://www.youtube.com/watch?v=C4luLE78-j8"
+                src="https://www.youtube.com/embed/fOB73qRVGJs?start=1197"
                 title="Sunday Sermon Highlights"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -124,13 +124,14 @@ const Home = () => {
               <h3>Weekly Bible Study</h3>
               <iframe
                 className="video-frame"
-                src="https://www.youtube.com/watch?v=c_VyjZTR5VM"
+                src="https://www.youtube.com/embed/c_VyjZTR5VM"
                 title="Weekly Bible Study"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
               <p>Watch the latest sessions from our weekly Bible study series.</p>
             </div>
+
           </div>
         </div>
       </section>
