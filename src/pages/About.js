@@ -29,6 +29,18 @@ const About = () => {
       content: `
         Our vision is not just to transform lives but to inspire individuals to become living temples of God’s presence—His dwelling place. We believe that through prayer, worship, and the Word, lives can be transformed, empowered, and filled with God’s Spirit to reflect His light in the world. `,
     },
+    {
+      title: 'Healing, Deliverance, and Prophetic Ministry',
+      content: `Zoe is a house of healing and restoration. We believe in the power of prayer and the move of the Holy Spirit to bring healing to broken hearts, freedom from bondage, and restoration to lives. Through deliverance services and prophetic ministry, we create an atmosphere where God’s power brings breakthroughs and miracles.`,
+    },
+    {
+      title: 'Family Guidance and Growth',
+      content: `We are passionate about building strong families and relationships. Zoe Fellowship provides guidance, counseling, and resources to help families grow in faith, unity, and purpose. Whether it’s marriage support, parenting workshops, or family enrichment programs, we are committed to strengthening homes and empowering families. `,
+    },
+    {
+      title: 'Transforming Lives, Impacting Communities',
+      content: `Faith goes beyond personal transformation—it’s about making a difference in the world. At Zoe Fellowship, we are called to serve our communities, reach the lost, and empower individuals to become agents of change. Together, we share God’s love through outreach programs, missions, and acts of service.`,
+    },
   ];
 
   return (

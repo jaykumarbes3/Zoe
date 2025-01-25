@@ -256,49 +256,84 @@ footer a:hover {
   margin-bottom: 30px;
   font-style: italic;
 }
-
-/* Reconnect, Renew, Revive, Refine Section */
+/* Renew, Revive, Refine Section */
 .reconnect-renew {
-  background-color: #f7f7f7;
+  background: #f7f9fc; /* Soft background color */
   padding: 60px 20px;
 }
 
-.reconnect-renew h2 {
+.reconnect-renew .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-title {
   font-size: 2.5rem;
+  font-weight: 700;
   color: #333;
   margin-bottom: 40px;
-  text-align: center;
-  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.reconnect-renew .grid-container {
+/* Grid Layout */
+.grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  align-items: stretch; /* Ensures equal height for all items */
+  padding: 0 20px;
 }
 
-.reconnect-renew .grid-item {
-  background-color: #ffffff;
+.grid-item {
+  background: white;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  height: 100%; /* Ensures equal height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures text spacing is consistent */
 }
 
-.reconnect-renew .grid-item:hover {
+.grid-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-.reconnect-renew .grid-item h3 {
-  font-size: 1.3rem;
-  color: #007bff;
+.grid-item h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #007bff; /* Accent color */
   margin-bottom: 15px;
 }
 
-.reconnect-renew .grid-item p {
+.grid-item p {
   font-size: 1rem;
   color: #555;
   line-height: 1.6;
+  margin-bottom: 0; /* Prevents excessive bottom space */
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .grid-item h3 {
+    font-size: 1.3rem;
+  }
+
+  .grid-item p {
+    font-size: 0.9rem;
+  }
 }
