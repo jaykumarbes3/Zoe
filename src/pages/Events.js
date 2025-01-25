@@ -9,8 +9,8 @@ const Events = () => {
 
   // Sample list of upcoming events
   const upcomingEvents = [
-    { date: 'January 01, 2025', title: 'Saturday Worship Service', description: 'A powerful time of worship and prayer.' },
-    { date: 'December 25, 2024', title: 'Christmas Celebration', description: 'Celebrate the birth of Christ with us.' },
+    { date: 'Feburary 07, 2025', title: 'Saturday Worship Service', description: 'A powerful time of worship and prayer.' },
+    { date: 'December 25, 2025', title: 'Christmas Celebration', description: 'Celebrate the birth of Christ with us.' },
   ];
 
   return (
