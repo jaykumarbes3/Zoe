@@ -59,36 +59,30 @@ const Home = () => {
 
       {/* Reconnect, Renew, Revive, Refine Section */}
       <section className="reconnect-renew">
-        <div className="container">
-          <h2>Reconnect, Renew, Revive, Refine</h2>
-          <div className="grid-container">
-            <div className="grid-item">
-              <h3>Reconnect with God</h3>
-              <p>
-                Rediscover the joy of a personal relationship with God through worship, prayer, and fellowship.
-              </p>
-            </div>
-            <div className="grid-item">
-              <h3>Renew Your Faith In God</h3>
-              <p>
-                Strengthen your faith and grow spiritually with dynamic teaching and life-transforming experiences.
-              </p>
-            </div>
-            <div className="grid-item">
-              <h3>Revive Your Passion to Seek God</h3>
-              <p>
-                Ignite your hunger to know God more deeply and experience His presence in every area of your life.
-              </p>
-            </div>
-            <div className="grid-item">
-              <h3>Refine Your Purpose in Serving God</h3>
-              <p>
-                Discover your God-given purpose and live it out with passion, excellence, and love.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+  <div className="container">
+    <h2 className="section-title">Reconnect, Renew, Revive, Refine</h2>
+    <div className="grid-container">
+      <div className="grid-item">
+        <h3>Reconnect with God</h3>
+        <p>
+          Rediscover the joy of a personal relationship with God through worship, prayer, and fellowship.
+        </p>
+      </div>
+      <div className="grid-item">
+        <h3>Renew Your Faith In God</h3>
+        <p>
+          Strengthen your faith and grow spiritually with dynamic teaching and life-transforming experiences.
+        </p>
+      </div>
+      <div className="grid-item">
+        <h3>Revive Your Passion to Seek God</h3>
+        <p>
+          Ignite your hunger to know God more deeply and experience His presence in every area of your life.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Upcoming Events Section */}
       <section className="upcoming-events stylish-section">
