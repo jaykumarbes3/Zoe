@@ -13,7 +13,7 @@ const Navbar = () => {
         <Link
           className="navbar-brand"
           to="/"
-          style={{ fontSize: '24px', fontWeight: 'bold', color: '#107C17' }}
+          style={{ fontSize: '24px', fontWeight: 'bold', color: '#007bff' }}
         >
           Zoe International
         </Link>
