@@ -261,3 +261,99 @@ footer {
 .about-content {
   max-width: 800px; /* Adjust as needed */
 }
+/* Ensure images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive text adjustments */
+h1, h2, h3, p {
+  word-wrap: break-word;
+  line-height: 1.5;
+}
+
+.container {
+  padding: 20px; /* Ensure proper spacing */
+  overflow: hidden; /* Avoid content overflow */
+}
+
+/* Add Media Queries for Different Screen Sizes */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  .grid-container {
+    grid-template-columns: 1fr; /* Adjust layout for small screens */
+  }
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px; /* Ensure spacing between items */
+}
+
+.grid-item {
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  height: auto; /* Allow flexibility for content */
+}
+.hero {
+  background: url('../src/pages/Images/churchhome.jpg') no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px; /* Increase padding */
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 30px 10px; /* Reduce padding for smaller screens */
+  }
+
+  .hero h1 {
+    font-size: 2rem; /* Reduce font size */
+  }
+}
+.text-over-image {
+  position: relative;
+  z-index: 10; /* Ensures text is above the image */
+}
+
+.image-background {
+  position: absolute;
+  z-index: 1; /* Ensures the image stays below */
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.flex-item {
+  flex: 1 1 calc(33.333% - 20px); /* Adjusts based on screen size */
+}
+
+@media (max-width: 768px) {
+  .flex-item {
+    flex: 1 1 100%; /* Make items stack on smaller screens */
+  }
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+body {
+  font-size: 16px; /* Base font size */
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* Reduce font size on smaller screens */
+  }
+}

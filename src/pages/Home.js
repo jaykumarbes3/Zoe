@@ -2,6 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import CountdownTimer from './CountdownTimer';
 import './Home.css';
+import reconnect from './Images/Reconnect.png';
+import renew from './Images/Renew.png';
+import review from './Images/review.jpeg';
 
 const Home = () => {
   return (
@@ -59,31 +62,33 @@ const Home = () => {
 
       {/* Reconnect, Renew, Revive, Refine Section */}
       <section className="reconnect-renew">
-  <div className="container">
-    <h2 className="section-title">Reconnect, Renew, Revive, Refine</h2>
-    <div className="grid-container">
-      <div className="grid-item">
-        <h3>Reconnect with God</h3>
-        <p>
-          Rediscover the joy of a personal relationship with God through worship, prayer, and fellowship.
-        </p>
-      </div>
-      <div className="grid-item">
-        <h3>Renew Your Faith In God</h3>
-        <p>
-          Strengthen your faith and grow spiritually with dynamic teaching and life-transforming experiences.
-        </p>
-      </div>
-      <div className="grid-item">
-        <h3>Revive Your Passion to Seek God</h3>
-        <p>
-          Ignite your hunger to know God more deeply and experience His presence in every area of your life.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
+        <div className="container">
+          <h2 className="section-title">Reconnect, Renew, Revive, Refine</h2>
+          <div className="grid-container">
+            <div className="grid-item">
+              <h3>Reconnect with God</h3>
+              <img src={reconnect} alt="Reconnect with God" />
+              <p>
+                Rediscover the joy of a personal relationship with God through worship, prayer, and fellowship.
+              </p>
+            </div>
+            <div className="grid-item">
+              <h3>Renew Your Faith In God</h3>
+              <img src={renew} alt="Renew Your Faith" />
+              <p>
+                Strengthen your faith and grow spiritually with dynamic teaching and life-transforming experiences.
+              </p>
+            </div>
+            <div className="grid-item">
+              <h3>Revive Your Passion to Seek God</h3>
+              <img src={review} alt="Revive Your Passion" />
+              <p>
+                Ignite your hunger to know God more deeply and experience His presence in every area of your life.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Upcoming Events Section */}
       <section className="upcoming-events stylish-section">
         <div className="container">
