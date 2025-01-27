@@ -8,7 +8,9 @@ const Support = () => {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
+    name: '', // Added for registration
   });
+  const [isRegister, setIsRegister] = useState(false); // Toggle between Sign In and Register
   const [newcomers, setNewcomers] = useState([]); // State to store newcomer registrations
   const [loading, setLoading] = useState(false); // State for loading
   const [error, setError] = useState(null); // State for error handling
@@ -39,8 +41,13 @@ const Support = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form Data:', formData);
-    // Add authentication logic here
+    if (isRegister) {
+      console.log('Register Data:', formData);
+      // Add registration logic here
+    } else {
+      console.log('Sign In Data:', formData);
+      // Add authentication logic here
+    }
   };
 
   return (
@@ -64,15 +71,15 @@ const Support = () => {
           boxShadow: '0px 6px 15px rgba(0, 0, 0, 0.1)',
         }}
       >
-        <Typography variant="h3" sx={{ fontWeight: 600, color: '#333', mb: 2 }}>
+        <Typography variant="h3" sx={{ fontWeight: 600, color: '#0d6efd', mb: 2 }}>
           Join the Zoe Fellowship Family 
         </Typography>
         <Typography variant="h6" sx={{ color: '#555', lineHeight: 1.6, fontWeight: 400, mb: 3 }}>
-         No matter where you are on your spiritual journey, Zoe Fellowship welcomes you with open arms. Come and experience God’s love, guidance, and power in an atmosphere where lives are transformed, faith is renewed, and hearts are refined. 
+          No matter where you are on your spiritual journey, Zoe Fellowship welcomes you with open arms. Come and experience God’s love, guidance, and power in an atmosphere where lives are transformed, faith is renewed, and hearts are refined.
         </Typography>
       </Box>
 
-      {/* Login Section */}
+      {/* Login/Register Section */}
       <Paper
         elevation={3}
         sx={{
@@ -82,10 +89,22 @@ const Support = () => {
           backgroundColor: '#ffffff',
         }}
       >
-        <Typography variant="h5" textAlign="center" sx={{ mb: 3, fontWeight: 600 }}>
-          Login to Your Account
+        <Typography variant="h5" textAlign="center" sx={{ mb: 3, fontWeight: 600,color: '#0d6efd' }}>
+          {isRegister ? 'Register an Account' : 'Login to Your Account'}
         </Typography>
         <Box component="form" onSubmit={handleSubmit} sx={{ display: 'flex', flexDirection: 'column' }}>
+          {isRegister && (
+            <TextField
+              name="name"
+              label="Full Name"
+              value={formData.name}
+              onChange={handleChange}
+              fullWidth
+              required
+              margin="normal"
+              variant="outlined"
+            />
+          )}
           <TextField
             name="email"
             label="Email Address"
@@ -114,9 +133,16 @@ const Support = () => {
             color="primary"
             sx={{ mt: 2, py: 1.5, fontSize: '1rem', fontWeight: 'bold' }}
           >
-            Sign In
+            {isRegister ? 'Register' : 'Sign In'}
           </Button>
         </Box>
+        <Button
+          variant="text"
+          onClick={() => setIsRegister(!isRegister)}
+          sx={{ mt: 2, fontSize: '0.9rem', fontWeight: 'bold', textTransform: 'none' }}
+        >
+          {isRegister ? 'Already have an account? Sign In' : 'Don’t have an account? Register'}
+        </Button>
       </Paper>
 
       {/* Admin-only Newcomer Registrations */}

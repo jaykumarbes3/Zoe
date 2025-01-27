@@ -35,7 +35,7 @@ const Ministries = () => {
   const handleClose = () => setShow(false);
 
   return (
-    <div className="ministries-container">
+    <div className={`ministries-container ${show ? 'expanded' : ''}`}>
       <h2>Our Ministries</h2>
       <div className="ministries-grid">
         {ministries.map((ministry, index) => (
