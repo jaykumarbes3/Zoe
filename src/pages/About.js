@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Box, Card, CardContent, Typography, Paper } from '@mui/material';
 import './About.css'; // Import custom CSS if needed
+import about from './Images/interior-church.jpg';
 
 const About = () => {
   const sections = [
@@ -67,6 +68,19 @@ const About = () => {
         >
           About Our Church
         </Typography>
+        
+        {/* Add Image after the header */}
+        <img 
+          src={about} 
+          alt="About our church" 
+          style={{
+            width: '100%', 
+            height: '300px', 
+            borderRadius: '8px', 
+            marginBottom: '24px'
+          }} 
+        />
+        
         <Box
           sx={{
             display: 'flex',
