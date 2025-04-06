@@ -5,7 +5,7 @@ import './Donation.css'; // Optional: Create a Donation-specific stylesheet for 
 const Donation = () => {
   const [currencies, setCurrencies] = useState([]);
   const [selectedCurrency, setSelectedCurrency] = useState('USD'); // Default currency
-
+// Donation
   useEffect(() => {
     // Fetch currency data from an API (you can use any suitable currency API)
     fetch('https://open.er-api.com/v6/latest/USD')  // Example API for latest currency data
