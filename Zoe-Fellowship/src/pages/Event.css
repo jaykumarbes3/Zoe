@@ -1,0 +1,215 @@
+/* Main container for the events page */
+.events-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+/* Header Styling */
+.events-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.events-header h1 {
+  font-size: 2.8rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.events-header p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Flexbox Layout for Content */
+.events-content {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* Left Column for Calendar */
+.left-column {
+  flex: 1;
+  max-width: 400px;
+}
+
+/* Calendar Section Styling */
+.calendar-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.react-calendar {
+  width: 100%;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.react-calendar__tile--active {
+  background: #1976d2;
+  color: white;
+  border-radius: 6px;
+}
+
+.upcoming-events-list {
+  margin-top: 20px;
+}
+
+.event-item {
+  background-color: #f8f9fa;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.event-item h4 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #0056b3;
+}
+
+.event-item p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Right Column for Event Highlights */
+.right-column {
+  flex: 1;
+  max-width: 600px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Grid Container for Highlights */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  min-height: 400px;
+  overflow: hidden;
+  padding-bottom: 0;
+}
+
+.grid-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.video-frame {
+  width: 100%;
+  height: 250px;
+  border: none;
+  border-radius: 12px;
+}
+
+/* Countdown Timer Styling */
+.countdown-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.countdown-container p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.countdown-label {
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Event Image Styling */
+.event-image-small {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-image-small:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Event Cards */
+.event-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.event-card-header h3 {
+  font-size: 1.8rem;
+  color: #0056b3;
+  margin-bottom: 10px;
+}
+
+.event-card-body p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .events-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .right-column {
+    padding-left: 0;
+  }
+
+  .event-image-small {
+    height: 180px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
