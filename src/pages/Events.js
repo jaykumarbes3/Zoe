@@ -9,8 +9,8 @@ const Events = () => {
 
   // Sample list of upcoming events
   const upcomingEvents = [
-    { date: 'December 14, 2024', title: 'Saturday Worship Service', description: 'A powerful time of worship and prayer.' },
-    { date: 'December 20, 2024', title: 'Christmas Celebration', description: 'Celebrate the birth of Christ with us.' },
+    { date: 'Feburary 07, 2025', title: 'Saturday Worship Service', description: 'A powerful time of worship and prayer.' },
+    { date: 'December 25, 2025', title: 'Christmas Celebration', description: 'Celebrate the birth of Christ with us.' },
   ];
 
   return (
@@ -156,7 +156,7 @@ const Events = () => {
                 <iframe
                   width="100%"
                   height="200"
-                  src="https://www.youtube.com/embed/dsyUPCXBy-g"
+                  src="https://www.youtube.com/watch?v=f2oxGYpuLkw"
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -189,7 +189,7 @@ const Events = () => {
                 <iframe
                   width="100%"
                   height="200"
-                  src="https://www.youtube.com/embed/dsyUPCXBy-g"
+                  src="https://www.youtube.com/watch?v=DHBo7ka3YZQ&list=PL4A73DDEE675FBC39"
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

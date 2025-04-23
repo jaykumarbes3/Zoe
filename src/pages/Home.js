@@ -2,6 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import CountdownTimer from './CountdownTimer';
 import './Home.css';
+import reconnect from './Images/Reconnect.png';
+import renew from './Images/Renew.png';
+import review from './Images/review.jpeg';
 
 const Home = () => {
   return (
@@ -9,7 +12,7 @@ const Home = () => {
       {/* Hero Section with Parallax Effect */}
       <section className="hero parallax">
         <div className="hero-content">
-          <div className="home-heading-module h1"> Welcome to Zoe International Ministries</div>
+          <h1 className="home-heading-module">Welcome to Zoe Fellowship – Reconnect. Renew. Revive. Refine.</h1>
           <p>Building a community of faith, love, and service.</p>
           <Link to="/learnmore" className="btn btn-primary">
             Learn More
@@ -30,7 +33,7 @@ const Home = () => {
             <p>Community Prayer Gathering</p>
           </div>
           <div className="carousel-slide">
-            <img src="./OutreachImage.jpg" alt="Bible Study" />
+            <img src="./OutreachImage.jpg" alt="Outreach Service" />
             <p>Outreach Service Events</p>
           </div>
           <div className="carousel-slide">
@@ -40,20 +43,52 @@ const Home = () => {
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="about">
+      {/* Vision and Mission Section */}
+      <section className="vision-mission-section">
         <div className="container">
-          <h2>About Us</h2>
+          <h2>Our Vision</h2>
           <p>
-            At Zoe International Ministries, our mission is to inspire and transform lives through the message of hope, faith, and love. 
-            We are dedicated to creating a welcoming space for everyone to grow spiritually and connect with others.
+            <strong>"Connecting people with God, we inspire hearts to experience His presence and become His dwelling place."</strong>
           </p>
-          <Link to="/about" className="btn btn-secondary">
-            About Our Church
-          </Link>
+          <h2>Our Mission</h2>
+          <p>
+            <strong>
+              "We glorify God by sharing His love, fostering relationships, and empowering faith through worship, service, and teaching, 
+              creating a vibrant Fellowship of transformed lives."
+            </strong>
+          </p>
         </div>
       </section>
 
+      {/* Reconnect, Renew, Revive, Refine Section */}
+      <section className="reconnect-renew">
+        <div className="container">
+          <h2 className="section-title">Reconnect, Renew, Revive, Refine</h2>
+          <div className="grid-container">
+            <div className="grid-item">
+              <h3>Reconnect with God</h3>
+              <img src={reconnect} alt="Reconnect with God" />
+              <p>
+                Rediscover the joy of a personal relationship with God through worship, prayer, and fellowship.
+              </p>
+            </div>
+            <div className="grid-item">
+              <h3>Renew Your Faith In God</h3>
+              <img src={renew} alt="Renew Your Faith" />
+              <p>
+                Strengthen your faith and grow spiritually with dynamic teaching and life-transforming experiences.
+              </p>
+            </div>
+            <div className="grid-item">
+              <h3>Revive Your Passion to Seek God</h3>
+              <img src={review} alt="Revive Your Passion" />
+              <p>
+                Ignite your hunger to know God more deeply and experience His presence in every area of your life.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Upcoming Events Section */}
       <section className="upcoming-events stylish-section">
         <div className="container">
@@ -64,7 +99,7 @@ const Home = () => {
               <h3>Sunday Sermon Highlights</h3>
               <iframe
                 className="video-frame"
-                src="https://www.youtube.com/embed/sampleVideoId"
+                src="https://www.youtube.com/embed/fOB73qRVGJs?start=1197"
                 title="Sunday Sermon Highlights"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -88,13 +123,14 @@ const Home = () => {
               <h3>Weekly Bible Study</h3>
               <iframe
                 className="video-frame"
-                src="https://www.youtube.com/embed/anotherSampleVideoId"
+                src="https://www.youtube.com/embed/c_VyjZTR5VM"
                 title="Weekly Bible Study"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
               <p>Watch the latest sessions from our weekly Bible study series.</p>
             </div>
+
           </div>
         </div>
       </section>
@@ -102,7 +138,7 @@ const Home = () => {
       {/* Countdown Timer Section */}
       <section className="countdown-container">
         <h1>Next Event Starts In</h1>
-        <CountdownTimer targetDate="2024-12-14T18:00:00" />
+        <CountdownTimer targetDate="2025-04-17T18:00:00" />
       </section>
     </div>
   );

@@ -235,3 +235,105 @@ footer a:hover {
   margin-bottom: 20px;
   font-weight: 600;
 }
+/* Vision and Mission Section */
+.vision-mission-section {
+  background-color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.vision-mission-section h2 {
+  font-size: 2.5rem;
+  color: #007bff;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.vision-mission-section p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+/* Renew, Revive, Refine Section */
+.reconnect-renew {
+  background: #f7f9fc; /* Soft background color */
+  padding: 60px 20px;
+}
+
+.reconnect-renew .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  align-items: stretch; /* Ensures equal height for all items */
+  padding: 0 20px;
+}
+
+.grid-item {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  height: 100%; /* Ensures equal height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures text spacing is consistent */
+}
+
+.grid-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.grid-item h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #007bff; /* Accent color */
+  margin-bottom: 15px;
+}
+
+.grid-item p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 0; /* Prevents excessive bottom space */
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .grid-item h3 {
+    font-size: 1.3rem;
+  }
+
+  .grid-item p {
+    font-size: 0.9rem;
+  }
+}
