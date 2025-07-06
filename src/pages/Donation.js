@@ -8,7 +8,7 @@ const Donation = () => {
 
   useEffect(() => {
     // Fetch currency data from an API (you can use any suitable currency API)
-    fetch('https://open.er-api.com/v6/latest/USD')  // Example API for latest currency data
+    fetch('https://open.er-api.com/v6/latest/USD') 
       .then((response) => response.json())
       .then((data) => {
         const currencyList = Object.keys(data.rates);
